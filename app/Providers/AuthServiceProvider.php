@@ -26,6 +26,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies($gate);
 
-        //
+        //用户密码加密 ，md5
+		\Auth::provider('UserProvider',function($app,$config){
+			return new UserProvider($this->app['hash'],$config['model']);
+		});
     }
 }
