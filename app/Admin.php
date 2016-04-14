@@ -9,7 +9,4 @@ class Admin extends Model implements Authenticatable
 {
     use \Illuminate\Auth\Authenticatable;
 
-	public function saves(){
-		
-	}
 }
